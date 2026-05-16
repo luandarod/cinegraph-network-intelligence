@@ -1,0 +1,8 @@
+relationship,coverage_pct
+movie_recommendations_main_only,69.70948012232416
+movie_recommendations_with_orphans,100.0
+tv_recommendations_main_only,99.94689463117674
+tv_recommendations_with_orphans,100.0
+movie_cast_to_people,70.55638879111125
+movie_directors_to_people,67.22037652270211
+tv_creators_to_people,60.42207109303793

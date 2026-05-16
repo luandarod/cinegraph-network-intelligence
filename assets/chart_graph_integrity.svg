@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="360" viewBox="0 0 920 360">
+<rect width="100%" height="100%" fill="#0b1020"/>
+<text x="460.0" y="28" text-anchor="middle" fill="#e5e7eb" font-family="Arial" font-size="22" font-weight="700">CineGraph relationship integrity</text>
+<text x="460.0" y="52" text-anchor="middle" fill="#94a3b8" font-family="Arial" font-size="12">Resolved references across people and recommendation edges</text>
+<text x="235" y="93" text-anchor="end" fill="#cbd5e1" font-family="Arial" font-size="13">Movie recs: main only</text>
+<rect x="250" y="75" width="411.3" height="24" rx="7" fill="#38bdf8"/>
+<text x="669.3" y="92" fill="#e5e7eb" font-family="Arial" font-size="12">69.7%</text>
+<text x="235" y="133" text-anchor="end" fill="#cbd5e1" font-family="Arial" font-size="13">Movie recs: +orphans</text>
+<rect x="250" y="115" width="590.0" height="24" rx="7" fill="#38bdf8"/>
+<text x="848.0" y="132" fill="#e5e7eb" font-family="Arial" font-size="12">100.0%</text>
+<text x="235" y="173" text-anchor="end" fill="#cbd5e1" font-family="Arial" font-size="13">TV recs: main only</text>
+<rect x="250" y="155" width="589.7" height="24" rx="7" fill="#38bdf8"/>
+<text x="847.7" y="172" fill="#e5e7eb" font-family="Arial" font-size="12">99.9%</text>
+<text x="235" y="213" text-anchor="end" fill="#cbd5e1" font-family="Arial" font-size="13">TV recs: +orphans</text>
+<rect x="250" y="195" width="590.0" height="24" rx="7" fill="#38bdf8"/>
+<text x="848.0" y="212" fill="#e5e7eb" font-family="Arial" font-size="12">100.0%</text>
+<text x="235" y="253" text-anchor="end" fill="#cbd5e1" font-family="Arial" font-size="13">Movie cast→people</text>
+<rect x="250" y="235" width="416.3" height="24" rx="7" fill="#38bdf8"/>
+<text x="674.3" y="252" fill="#e5e7eb" font-family="Arial" font-size="12">70.6%</text>
+<text x="235" y="293" text-anchor="end" fill="#cbd5e1" font-family="Arial" font-size="13">Movie director→people</text>
+<rect x="250" y="275" width="396.6" height="24" rx="7" fill="#38bdf8"/>
+<text x="654.6" y="292" fill="#e5e7eb" font-family="Arial" font-size="12">67.2%</text>
+<text x="235" y="333" text-anchor="end" fill="#cbd5e1" font-family="Arial" font-size="13">TV creator→people</text>
+<rect x="250" y="315" width="356.5" height="24" rx="7" fill="#38bdf8"/>
+<text x="614.5" y="332" fill="#e5e7eb" font-family="Arial" font-size="12">60.4%</text>
+</svg>

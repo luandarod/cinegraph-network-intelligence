@@ -1,0 +1,2 @@
+movies,tv_shows,people,movie_reviews,tv_reviews,orphan_movies,orphan_tv,movie_cast_edges,tv_cast_edges,movie_recommendation_edges,tv_recommendation_edges,movies_with_financials,median_movie_roi_pct,movie_review_rating_coverage_pct,tv_review_rating_coverage_pct
+22393,15562,58393,22712,2923,8068,3389,261364,119930,111180,77205,8068,96.75,91.3534695315243,85.49435511495039
