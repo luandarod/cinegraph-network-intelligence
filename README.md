@@ -1,18 +1,54 @@
 # CineGraph Network Intelligence
 
-**Graph Analytics | Recommender Systems | NLP | Knowledge Graphs | RAG-Ready Data Modeling**
+**Graph Analytics | Neural Search | Hybrid Recommender Systems | NLP | Knowledge Graphs | RAG-Ready Media Intelligence**
 
-This project explores the CineGraph TMDB dataset as a connected media graph, not as a flat movie table.
+CineGraph Network Intelligence explores the CineGraph TMDB dataset as a connected media graph, not as a flat movie table.
 
-The objective is to demonstrate advanced analytics skills across graph modeling, relationship integrity, recommendation networks, cast collaboration analysis, streaming availability and review text mining.
+The project now includes **CineGraph AI Explorer**, a Streamlit application designed as an intelligent media discovery prototype. It combines graph analytics, semantic search, hybrid recommendations and explainable recommendation logic for movie, TV and people-network exploration.
 
-![Relationship integrity](assets/chart_graph_integrity.svg)
+## CineGraph AI Explorer
 
-## Analytical question
+The app is built to answer a practical product question:
 
-How can a large-scale entertainment dataset be transformed into a graph intelligence layer for recommendation analysis, content strategy, review mining and RAG-ready knowledge systems?
+> How can a large entertainment catalog become an intelligent discovery layer for recommendations, semantic search, content strategy and RAG-ready media retrieval?
 
-## Dataset
+### App modules
+
+1. **Home with catalog KPIs**  
+   Executive overview of movies, TV shows, people, reviews, graph coverage and financial genre signals.
+
+2. **Movie / TV search**  
+   Search by title, genre, person or description using semantic matching.
+
+3. **Hybrid recommender**  
+   Recommendation logic combining semantic similarity, graph proximity, quality signals and business signals.
+
+4. **People and title network exploration**  
+   Interactive network view connecting the selected node with recommended nodes and genre signals.
+
+5. **Semantic search by description**  
+   Natural-language search for content discovery, using sentence embeddings when available and TF-IDF as an interpretable fallback.
+
+6. **Recommendation explanation**  
+   Explains why each recommendation appeared by decomposing semantic, graph, quality and business scores.
+
+## Run locally
+
+```bash
+pip install -r requirements.txt
+streamlit run app/streamlit_app.py
+```
+
+The app works with the derived CSV files already in the repository. If richer title-level files are later added under `data/processed/`, the same app will automatically use them for title-level search and recommendations.
+
+Expected optional processed files:
+
+```text
+data/processed/catalog_nodes.csv
+data/processed/graph_edges.csv
+```
+
+## Current dataset layer
 
 CineGraph contains normalized TMDB-based data for movies, TV shows, people, orphans and reviews.
 
@@ -28,15 +64,17 @@ CineGraph contains normalized TMDB-based data for movies, TV shows, people, orph
 
 ## Why this project is different
 
-Previous portfolio projects focused on healthcare, BI, logistics and predictive modeling. This project adds a different layer of technical depth:
+Previous portfolio projects focused on healthcare, BI, logistics and predictive modeling. This project adds a deeper technical layer:
 
-- graph-first data modeling
-- many-to-many edge extraction from comma-separated IDs
-- entity resolution and relationship coverage analysis
-- co-star collaboration network analysis
-- recommendation graph analysis with orphan node handling
-- review text mining with TF-IDF
-- RAG-ready thinking for media knowledge retrieval
+- graph-first data modeling;
+- many-to-many edge extraction from comma-separated IDs;
+- entity resolution and relationship coverage analysis;
+- co-star collaboration network analysis;
+- recommendation graph analysis with orphan node handling;
+- semantic search with neural embeddings when available;
+- hybrid recommendation logic;
+- explainable recommendation scoring;
+- RAG-ready thinking for media knowledge retrieval.
 
 ## Key graph metrics
 
@@ -66,7 +104,7 @@ The project also uses the financial columns available in the movie table, includ
 
 ![Genre profit](assets/chart_genre_profit.svg)
 
-The highest total reported profit is concentrated in large commercial genres such as Adventure, Action, Comedy, Drama and Science Fiction. This part of the project is not a prediction model; it is an exploratory view of the titles where TMDB reports both budget and revenue.
+The highest total reported profit is concentrated in large commercial genres such as Adventure, Action, Comedy, Drama and Science Fiction. This part of the project is exploratory and only uses titles where TMDB reports both budget and revenue.
 
 ## Streaming market coverage
 
@@ -78,15 +116,42 @@ The US market shows much broader provider coverage in this dataset, especially f
 
 ## Review text mining
 
-The review tables allow lightweight NLP analysis. I used TF-IDF to compare terms overrepresented in low-rated and high-rated reviews.
+The review tables allow lightweight NLP analysis. TF-IDF is used to compare terms overrepresented in low-rated and high-rated reviews.
 
 ![Review terms](assets/chart_review_terms.svg)
 
-This analysis is intentionally simple and interpretable. It can be extended into sentiment classification, topic modeling, aspect extraction or embeddings for semantic retrieval.
+This analysis can be extended into sentiment classification, topic modeling, aspect extraction or embeddings for semantic retrieval.
+
+## Hybrid recommendation logic
+
+The recommendation layer uses a weighted score:
+
+```text
+hybrid_score =
+  semantic_weight * semantic_similarity
++ graph_weight    * graph_proximity
++ quality_weight  * rating_signal
++ business_weight * popularity_revenue_roi_signal
+```
+
+This makes the recommendation interpretable. The app does not only return a list; it explains whether each result appeared because of semantic similarity, graph proximity, quality or business strength.
+
+## SEO / product positioning
+
+This project is positioned around high-signal keywords for data and AI portfolios:
+
+- graph analytics for media catalogs;
+- neural search for movies and TV shows;
+- hybrid recommender systems;
+- explainable recommendation engine;
+- RAG-ready knowledge graph;
+- semantic search with sentence embeddings;
+- entertainment data intelligence;
+- content discovery analytics.
 
 ## Methods
 
-1. Loaded seven normalized CSV files.
+1. Loaded normalized CSV files.
 2. Validated primary table sizes and schema.
 3. Parsed comma-separated ID lists into edge lists.
 4. Measured entity resolution coverage for cast, director, creator and recommendation relationships.
@@ -95,13 +160,18 @@ This analysis is intentionally simple and interpretable. It can be extended into
 7. Aggregated financial performance by genre.
 8. Compared streaming availability between Turkey and the United States.
 9. Applied TF-IDF to review text for interpretable NLP.
-10. Exported charts as SVG assets for GitHub documentation.
+10. Added a Streamlit intelligence app for search, hybrid recommendation and graph exploration.
+11. Added a neural embedding path using Sentence Transformers when available.
 
 ## Files
 
 ```text
-projects/cinegraph-network-intelligence/
+cinegraph-network-intelligence/
 ├── README.md
+├── app/
+│   └── streamlit_app.py
+├── .streamlit/
+│   └── config.toml
 ├── assets/
 │   ├── chart_graph_integrity.svg
 │   ├── chart_costar_network.svg
@@ -116,6 +186,7 @@ projects/cinegraph-network-intelligence/
 │   ├── low_review_terms.csv
 │   ├── high_review_terms.csv
 │   └── top_people_network_centrality.csv
+├── requirements.txt
 └── scripts/
     └── cinegraph_network_analysis.py
 ```
@@ -125,25 +196,28 @@ projects/cinegraph-network-intelligence/
 | Area | Tools / concepts |
 |---|---|
 | Graph analytics | NetworkX, edge lists, entity resolution, co-star networks |
-| NLP | TF-IDF, review text mining, interpretable term analysis |
-| Data modeling | normalized tables, many-to-many relationships, orphan node handling |
-| Visualization | Matplotlib/SVG charts, README visual storytelling |
-| Recommender systems | recommendation edges, graph coverage, content relationship analysis |
-| RAG readiness | entity-centered schema, graph links, metadata-rich retrieval design |
+| Neural NLP | Sentence Transformers, embeddings, semantic search |
+| NLP fallback | TF-IDF, review text mining, interpretable term analysis |
+| Recommendation systems | Hybrid scoring, semantic similarity, graph proximity, explainability |
+| Data modeling | Normalized tables, many-to-many relationships, orphan node handling |
+| Product analytics | Catalog discovery, content strategy, streaming coverage, financial signals |
+| Visualization | Streamlit, Plotly, Matplotlib/SVG charts |
+| RAG readiness | Entity-centered schema, graph links, metadata-rich retrieval design |
 
 ## Limitations
 
 - The graph is built from TMDB metadata and reflects availability and quality of that source.
 - Some person relationships do not resolve to `people.csv`, especially for TV creators and minor credits.
-- Reviews are multilingual and unevenly distributed, so TF-IDF results should be interpreted as exploratory.
+- Reviews are multilingual and unevenly distributed, so NLP results should be interpreted as exploratory.
 - Financial analysis only uses movies with both budget and revenue available.
-- Network analysis is sampled for readability; the full graph is much larger.
+- The current app can run from derived repository outputs; full title-level recommendation quality improves when `data/processed/catalog_nodes.csv` is added.
 
 ## Next steps
 
-- Build a full graph database version using Neo4j.
+- Deploy the app on Streamlit Community Cloud.
+- Build `data/processed/catalog_nodes.csv` from full title-level metadata.
 - Create embeddings from overviews, biographies and reviews.
-- Build a hybrid recommender combining graph proximity and semantic similarity.
-- Use Louvain/community detection to identify actor/director clusters.
-- Create a small RAG prototype for querying movie, TV and people relationships.
-- Add an interactive dashboard with genre, streaming and network filters.
+- Build a persistent FAISS vector index.
+- Add Node2Vec or GraphSAGE embeddings for graph-native recommendation.
+- Build a Neo4j version for full graph querying.
+- Create a RAG prototype for natural-language questions over movie, TV and people relationships.
