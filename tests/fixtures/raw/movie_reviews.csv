@@ -1,0 +1,5 @@
+review_id,tmdb_id,media_type,rating,content,created_at
+mr1,101,movie,9,"Sharp, emotional, and visually bold.",2024-01-01
+mr2,101,movie,3,"Confusing pacing and weak ending.",2024-01-02
+mr3,102,movie,8,"Strong atmosphere and memorable score.",2024-01-03
+mr4,102,movie,2,"Slow and frustrating, not worth the buildup.",2024-01-04

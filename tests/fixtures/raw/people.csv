@@ -1,0 +1,5 @@
+tmdb_id,name,known_for_dept,biography,popularity,known_movies,known_movie_ids,known_tv_shows,known_tv_ids,directed_movies,directed_movie_ids,profile_url
+1,Ana Cruz,Acting,"Lead actor across thrillers and crime series.",61.2,"Signal City","101","Night Wire","201",,,"profile-ana"
+2,Ben Hall,Acting,"Performer known for broadcast-themed stories.",58.4,"Signal City,Late Echo","101,102","Night Wire","201",,,"profile-ben"
+3,Mira Cole,Directing,"Director blending noir pacing with social thrillers.",42.1,"Signal City,Late Echo","101,102",,,,"profile-mira"
+4,Lina Park,Writing,"Showrunner focused on procedural storytelling.",39.8,,,"Night Wire","201",,,"profile-lina"

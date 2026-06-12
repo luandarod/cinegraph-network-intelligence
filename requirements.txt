@@ -2,7 +2,6 @@ streamlit>=1.36
 pandas>=2.2
 numpy>=1.26
 plotly>=5.22
-networkx>=3.2
 scikit-learn>=1.4
 sentence-transformers>=3.0
 kagglehub>=0.3
